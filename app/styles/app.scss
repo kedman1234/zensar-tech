@@ -1,6 +1,7 @@
 // Tachyons Modules
 @import 'tachyons';
 @import 'list';
+@import 'sidebar';
 
 .b1 {
   border: 1px solid;
@@ -8,4 +9,16 @@
 
 .h-100vh {
   height: calc(100vh - 20px);
+}
+
+.main-content {
+  flex: 1 1 0;
+}
+
+.btn-flat {
+  background: transparent;
+  box-shadow: none;
+  border: none;
+  text-decoration: underline;
+  cursor: pointer;
 }

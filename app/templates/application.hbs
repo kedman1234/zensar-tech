@@ -1,20 +1,13 @@
-{{!-- The following component displays Ember's default welcome message. --}}
-{{!-- <WelcomePage /> --}}
-{{!-- Feel free to remove this! --}}
+<div class="items-center h-100vh">
+  <div class="outline h3">
+    <nav class="bt bb tc mw7 center mt4 w-100">
 
+      {{#link-to "index" class="f6 f5-l link bg-animate black-80 hover-bg-lightest-blue dib pa3 ph4-l"}} Home {{/link-to}}
 
-<div class="flex items-center h-100vh">
-  <div class="outline pa3 mr2 h4">
-    <nav class="bt bb tc mw7 center mt4">
-
-      {{#link-to 'index' class="f6 f5-l link bg-animate black-80 hover-bg-lightest-blue dib pa3 ph4-l"}} Home {{/link-to}}
-
-      {{#link-to 'list' class="f6 f5-l link bg-animate black-80 hover-bg-lightest-blue dib pa3 ph4-l"}} Listing {{/link-to}}
+      {{#link-to "list" class="f6 f5-l link bg-animate black-80 hover-bg-lightest-blue dib pa3 ph4-l"}} Women {{/link-to}}
 
     </nav>
   </div>
-
-  <div class="outline pa3">
-    {{outlet}}
-  </div>
+  {{! folllowing is the main page}} 
+  {{outlet}}
 </div>

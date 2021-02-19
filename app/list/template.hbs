@@ -1,7 +1,22 @@
-{{!-- {{outlet}} --}}
-<main class="mw6 center">
-  {{#each model as |listItem|}}
-    <ListItem @item={{listItem}} />
-    {{!-- {{list-item item=listItem}} --}}
-  {{/each}}
+<main class="center flex w-100">
+  <aside class="pl3 sidebar">
+    <h3>Women"s Featured</h3>
+    <ul class="list pl0 ml0 center mw6 ba b--light-silver br2">
+      {{#each model.productCategory as |category|}}
+        <li class="ph3 pv3 bb b--light-silver">
+          <button class="btn btn-flat{{if (eq selectedCategory category) " b"}}" {{action "filterData" category}}>
+            {{category}}
+          </button>
+        </li>
+      {{/each}}
+    </ul>
+  </aside>
+  <article class="w-80 pl3 main-content">
+    <h3>{{selectedCategory}}</h3>
+    <div class="flex flex-wrap">
+      {{#each filterData as |item|}}
+        {{list-item item=item}}
+      {{/each}}
+    </div>
+  </article>
 </main>

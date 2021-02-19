@@ -1,17 +1,13 @@
-{{!-- {{yield}} --}}
-
-{{log item}}
-<article class="dt w-100 bb b--black-05 pb2 mt2" href="#0">
-  <div class="dtc w2 w3-ns v-mid">
-    <img src={{item.img}} class="ba b--black-10 db br2 w2 w3-ns h2 h3-ns"/>
+<article class="w-33 pa3 bb b--black-05 pb2 mt2 fl dt">
+  <div class="dt-row v-mid b1">
+    <img 
+      src={{item.productImage}}
+      alt={{item.productName}}
+      title={{item.productName}}
+      class="ba b--black-10 db br2 tc" >
   </div>
-  <div class="dtc v-mid pl3">
-    <h1 class="f6 f5-ns fw6 lh-title black mv0">{{item.name}}</h1>
-    <h2 class="f6 fw4 mt0 mb0 black-60">{{item.account}}</h2>
-  </div>
-  <div class="dtc v-mid">
-    <form class="w-100 tr">
-      <button class="f6 button-reset bg-white ba b--black-10 dim pointer pv1 black-60" type="submit">-> view</button>
-    </form>
+  <div class="dtc v-mid pl3 pt2">
+    <h1 class="f6 fw5 lh-title mt0 mb0 black w-90 truncate">{{item.productName}}</h1>
+    <h2 class="f6 f5-ns fw6 black-80 mv0">{{item.productPrice}}$</h2>
   </div>
 </article>
