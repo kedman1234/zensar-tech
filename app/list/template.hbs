@@ -1,0 +1,7 @@
+{{!-- {{outlet}} --}}
+<main class="mw6 center">
+  {{#each model as |listItem|}}
+    <ListItem @item={{listItem}} />
+    {{!-- {{list-item item=listItem}} --}}
+  {{/each}}
+</main>
